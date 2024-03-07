@@ -18,6 +18,7 @@
             <th>Correo</th>
             <th>Mensaje</th>
             <th></th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -28,10 +29,14 @@
                 <td>@contacto.Correo</td>
                 <td>@contacto.Mensaje</td>
                 <td>
+                    <a asp-page="/Contacto" asp-route-id="@contacto.Id" class="btn btn-primary">Actualizar</a>
+                </td>
+                <td>
                     <form method="post" asp-page-handler="Eliminar" asp-route-id="@contacto.Id">
                         <button type="submit" class="btn btn-danger">Eliminar</button>
                     </form>
                 </td>
+                
             </tr>
         }
     </tbody>

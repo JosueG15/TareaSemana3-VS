@@ -5,16 +5,17 @@
 <form id="frmcontacto" method="post">
     <div>
         <label for="nombre">Nombre: </label>
-        <input class="form-control" type="text" id="nombre" name="nombre" required>
+        <input class="form-control" type="text" id="nombre" name="nombre" value="@Model.FormContacto.Nombre" required>
+
     </div>
     <div>
         <label for="correo">Correo: </label>
-        <input class="form-control" type="email" id="correo" name="correo" required/>
+        <input class="form-control" type="email" id="correo" name="correo" value="@Model.FormContacto.Correo" required />
     </div>
     <div>
         <label for="mensaje">Mensaje: </label>
 
-        <textarea class="form-control" id="mensaje" name="mensaje" required></textarea>
+        <textarea class="form-control" id="mensaje" name="mensaje" required>@Model.FormContacto.Mensaje</textarea>
     </div>
     <br />
     <button class="btn btn-primary" type="submit">Enviar</button>
